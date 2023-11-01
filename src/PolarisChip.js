@@ -2,7 +2,10 @@ import { LitElement, html, css } from 'lit';
 export class PolarisChip extends LitElement {
   static get properties() {
     return {
-     
+      text: {type: String},
+     subtext:{type: String},
+     link:{type: String},
+     image:{type: String}    
     };
   }
   static get styles() {
@@ -89,7 +92,10 @@ export class PolarisChip extends LitElement {
   }
   constructor() {
     super();
-  
+  this.text = '';
+    this.subtext = '';
+    this.link = '';
+    this.image = '';  
   }
   render() {
     return html`
